@@ -1,0 +1,4 @@
+Flask==2.3.3
+ldap3==2.9.2
+pyjwt==2.6.0
+Flask-Limiter==2.3.0
