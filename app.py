@@ -15,7 +15,7 @@ BIND_PASSWORD = os.getenv('BIND_PASSWORD', 'admin_password')
 BASE_DN = os.getenv('BASE_DN', 'dc=example,dc=com')
 SECRET_KEY = os.getenv('SECRET_KEY', 'your_secret_key')
 HOST = os.getenv('HOST', '0.0.0.0')
-PORT = int(os.getenv('PORT', 5000))
+PORT = int(os.getenv('PORT', 8080))
 
 # Setup logging to stdout
 logging.basicConfig(level=logging.INFO, stream=sys.stdout, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')

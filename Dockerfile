@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install --no-cache-dir flask ldap3 pyjwt flask-limiter
+RUN pip install --no-cache-dir -r /app/requirements.txt
 
 CMD ["python", "app.py"]
