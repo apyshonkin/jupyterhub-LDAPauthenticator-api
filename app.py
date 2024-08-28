@@ -1,4 +1,5 @@
 import os
+import sys
 from flask import Flask, request, jsonify
 from ldap3 import Server, Connection, ALL
 import jwt
@@ -16,8 +17,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'your_secret_key')
 HOST = os.getenv('HOST', '0.0.0.0')
 PORT = int(os.getenv('PORT', 5000))
 
-# Setup logging
-logging.basicConfig(filename='ldapauth-api.log', level=logging.INFO)
+# Setup logging to stdout
+logging.basicConfig(level=logging.INFO, stream=sys.stdout, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 # JWT creation function
 def create_jwt_token(username):
